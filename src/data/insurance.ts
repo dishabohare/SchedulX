@@ -1,0 +1,86 @@
+import { InsurancePolicy, InsuranceClaim } from '../types';
+
+export const mockInsurancePolicy: InsurancePolicy = {
+  provider: 'Star Health Allied Insurance',
+  status: 'ACTIVE',
+  policyNumber: 'SH-XXXX-4582',
+  coverage: 500000, // ₹5,00,000
+  validUntil: '31 Dec 2026',
+  holderName: 'Rahul Sharma',
+  groupNumber: 'GRP-99420',
+};
+
+export const currentClaim: InsuranceClaim = {
+  id: 'CLM-1024',
+  claimId: 'CLM-1024',
+  treatmentCost: 85000,
+  claimSubmitted: 85000,
+  approvedAmount: 62500,
+  patientPayable: 22500,
+  status: 'APPROVED',
+  year: '2026',
+  date: '22 Jul 2026',
+  type: 'Hospitalization & Day Care Procedure',
+  breakdown: [
+    { category: 'Consultation', amount: 1000, description: 'Specialist physician fees' },
+    { category: 'Diagnostics', amount: 8500, description: 'Pre-op lab & MRI imaging' },
+    { category: 'Medicines', amount: 5500, description: 'Inpatient prescription drugs' },
+    { category: 'Hospitalization', amount: 40000, description: 'Room rent & nursing charges' },
+    { category: 'Procedure', amount: 30000, description: 'Surgical & OT equipment charge' },
+  ],
+};
+
+export const claimHistory: InsuranceClaim[] = [
+  {
+    id: 'CLM-1024',
+    claimId: 'CLM-1024',
+    treatmentCost: 85000,
+    claimSubmitted: 85000,
+    approvedAmount: 62500,
+    patientPayable: 22500,
+    status: 'APPROVED',
+    year: '2026',
+    date: '22 Jul 2026',
+    type: 'Hospitalization',
+    breakdown: [],
+  },
+  {
+    id: 'CLM-0871',
+    claimId: 'CLM-0871',
+    treatmentCost: 12500,
+    claimSubmitted: 12500,
+    approvedAmount: 12500,
+    patientPayable: 0,
+    status: 'APPROVED',
+    year: '2025',
+    date: '14 Nov 2025',
+    type: 'Diagnostics',
+    breakdown: [],
+  },
+  {
+    id: 'CLM-0750',
+    claimId: 'CLM-0750',
+    treatmentCost: 6800,
+    claimSubmitted: 6800,
+    approvedAmount: 0,
+    patientPayable: 6800,
+    status: 'REJECTED',
+    year: '2025',
+    date: '02 Aug 2025',
+    type: 'Outpatient Dental',
+    breakdown: [],
+  },
+  {
+    id: 'CLM-0620',
+    claimId: 'CLM-0620',
+    treatmentCost: 4500,
+    claimSubmitted: 4500,
+    approvedAmount: 0,
+    patientPayable: 4500,
+    status: 'PENDING',
+    year: '2026',
+    date: '15 Aug 2026',
+    type: 'Pharmacy Expenses',
+    breakdown: [],
+  },
+];

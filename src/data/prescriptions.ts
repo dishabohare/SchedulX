@@ -1,0 +1,88 @@
+import { Prescription } from '../types';
+
+export const mockPrescriptions: Prescription[] = [
+  {
+    id: 'RX-904',
+    prescriptionId: 'RX-2026-0941',
+    date: '12 Aug 2026',
+    doctorId: 'DOC-101',
+    doctorName: 'Dr. Sharma',
+    doctorSpecialization: 'General Medicine',
+    diagnosis: 'Seasonal upper respiratory tract infection',
+    medicines: [
+      {
+        id: 'MED-1',
+        name: 'Paracetamol 500mg',
+        dosage: '1 tablet',
+        frequency: '2 times daily',
+        duration: '5 days',
+        instructions: 'Take after meals with warm water',
+      },
+      {
+        id: 'MED-2',
+        name: 'Amoxicillin 500mg',
+        dosage: '1 capsule',
+        frequency: '3 times daily',
+        duration: '7 days',
+        instructions: 'Complete full course. Take after breakfast, lunch, and dinner',
+      },
+      {
+        id: 'MED-3',
+        name: 'Cetirizine 10mg',
+        dosage: '1 tablet',
+        frequency: 'Once daily at bedtime',
+        duration: '5 days',
+        instructions: 'May cause mild drowsiness. Avoid driving.',
+      },
+    ],
+    notes: 'Maintain fluid intake above 3 liters daily. Gargle with warm salt water twice daily.',
+  },
+  {
+    id: 'RX-882',
+    prescriptionId: 'RX-2026-0812',
+    date: '05 Aug 2026',
+    doctorId: 'DOC-102',
+    doctorName: 'Dr. Mehta',
+    doctorSpecialization: 'Diagnostics & Pathology',
+    diagnosis: 'Vitamin D3 insufficiency',
+    medicines: [
+      {
+        id: 'MED-4',
+        name: 'Cholecalciferol (Vitamin D3) 60,000 IU',
+        dosage: '1 sachet / capsule',
+        frequency: 'Once weekly',
+        duration: '8 weeks',
+        instructions: 'Take with milk after a main meal.',
+      },
+    ],
+    notes: 'Re-test Vitamin D level after completing the 8-week course.',
+  },
+  {
+    id: 'RX-740',
+    prescriptionId: 'RX-2026-0655',
+    date: '20 Jul 2026',
+    doctorId: 'DOC-105',
+    doctorName: 'Dr. Vikramaditya Rao',
+    doctorSpecialization: 'Orthopedics',
+    diagnosis: 'Acute ligament strain (Left Ankle)',
+    medicines: [
+      {
+        id: 'MED-5',
+        name: 'Aceclofenac + Paracetamol (100mg/325mg)',
+        dosage: '1 tablet',
+        frequency: 'Twice daily',
+        duration: '5 days',
+        instructions: 'Strictly take after food to prevent gastric discomfort.',
+      },
+      {
+        id: 'MED-6',
+        name: 'Pantoprazole 40mg',
+        dosage: '1 tablet',
+        frequency: 'Once daily in morning',
+        duration: '5 days',
+        instructions: 'Take on empty stomach 30 minutes before breakfast.',
+      },
+    ],
+    notes: 'Apply topical pain relief gel 3 times daily. Keep ankle elevated while sleeping.',
+  },
+];
